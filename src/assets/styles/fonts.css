@@ -1,0 +1,7 @@
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  src:
+    url('../fonts/roboto/Roboto-Black.woff2') format('woff2'),
+    url('../fonts/roboto/Roboto-Black.woff') format('woff');
+}

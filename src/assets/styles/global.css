@@ -1,0 +1,14 @@
+:root {
+  font-family: Roboto, sans-serif;
+
+  --color-primary-00: #e9f4ff;
+  --color-primary-01: #e6f0ff;
+  --color-primary-02: #06f;
+  --color-primary-hover: #297fff;
+  --color-primary-on-click: #005ce5;
+  --color-primary-disabled: #c1c1c1;
+  --color-additional-01: rgb(0 255 102 / 20%);
+  --color-additional-02: rgb(0 208 46 / 100%);
+  --color-additional-03: #d00000;
+  --color-additional-04: rgb(255 0 0 / 15%);
+}
