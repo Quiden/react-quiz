@@ -1,0 +1,9 @@
+.header {
+  height: 70px;
+  background-color: white;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
