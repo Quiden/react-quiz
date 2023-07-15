@@ -1,9 +1,13 @@
 .header {
-  height: 70px;
   background-color: white;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1440px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 150px;
 }

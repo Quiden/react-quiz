@@ -1,0 +1,24 @@
+.startGame {
+  margin: 140px auto;
+  max-width: 1040px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.header {
+  margin-bottom: 25px;
+}
+
+.rule {
+
+}
+
+.button {
+  width: 190px;
+  margin-top: 35px;
+}

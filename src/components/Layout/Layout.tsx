@@ -1,5 +1,6 @@
-import styles from "./Layout.module.css";
 import React, { FunctionComponent } from 'react';
+
+import styles from "./Layout.module.css";
 
 interface Props {
   children: React.ReactNode

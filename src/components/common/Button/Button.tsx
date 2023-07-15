@@ -1,5 +1,7 @@
-import { FunctionComponent } from 'react';
+
 import * as classNames from 'classnames';
+import { FunctionComponent } from 'react';
+
 import styles from './Button.module.css';
 
 interface Props {
