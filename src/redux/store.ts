@@ -1,18 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit';
-import questionsReducer from './questionsReducer.ts';
-import gameReducer from './gameReducer.ts';
 
-// const rootReducer = combineReducers({
-//   questions: questionsReducer,
-//   game: gameReducer,
-// })
+import api from './api/api.ts';
+import gameReducer from './reducers/gameReducer.ts';
+import questionsReducer from './reducers/questionsReducer.ts';
 
 export const store = configureStore({
   reducer: {
-    // reducer: rootReducer,
     questions: questionsReducer,
     game: gameReducer,
+    [api.reducerPath]: api.reducer
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(api.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

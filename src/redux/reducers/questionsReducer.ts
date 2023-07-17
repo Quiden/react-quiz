@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { Answer } from './api/questionsApi.ts';
+
+import { Answer } from '../api/questionsApi.ts';
 
 interface Questions {
   questions: Array<Question>

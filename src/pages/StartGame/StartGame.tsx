@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store.ts';
+
 import { Button } from '../../components/common/Button/Button.tsx';
+import { RootState } from '../../redux/store.ts';
 import styles from "./StartGame.module.css";
 
 export const StartGame = () => {
@@ -9,7 +10,7 @@ export const StartGame = () => {
   return <>
     <div className={styles.startGame}>
       <div className={styles.container}>
-        <h2 className={styles.header}>Game rules</h2>
+        <h3 className={styles.header}>Game rules</h3>
         {rules?.map((rule) => (
           <p className={styles.rule}>{rule}</p>
         ))}

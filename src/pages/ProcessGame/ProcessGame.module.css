@@ -1,0 +1,27 @@
+.game {
+  margin: 0 auto;
+  max-width: 880px;
+  padding: 50px 100px;
+  background-color: white;
+}
+
+.container {
+  position: relative;
+}
+
+.title {
+  margin-bottom: 40px;
+}
+
+.score {
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+
+.text {
+  margin-bottom: 35px;
+}
+
+.form {
+}
