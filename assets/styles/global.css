@@ -1,13 +1,15 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 :root {
   --color-primary-00: #e9f4ff;
   --color-primary-01: #e6f0ff;
   --color-primary-02: #06f;
-  --color-primary-03: #0066ff;
+  --color-primary-03: #06f;
+  --color-primary-04: #C0D9FF;
+  --color-primary-05: #D9E8FF;
   --color-primary-hover: #297fff;
   --color-primary-on-click: #005ce5;
   --color-primary-disabled: #c1c1c1;

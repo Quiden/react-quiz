@@ -1,40 +1,52 @@
-import { FunctionComponent } from 'react';
-import { useForm } from 'react-hook-form';
+import * as classNames from 'classnames';
+import {FunctionComponent, useState} from 'react';
 
 import { Answer } from '../../redux/api/questionsApi.ts';
-import { Button } from '../common/Button/Button.tsx';
-
+import { Button } from '../common/Buttons/Button/Button.tsx';
 import styles from "./Form.module.css";
-import * as classNames from 'classnames';
 
 interface Props {
   answers: Array<Answer>,
-  classNameForm: string
+  correctAnswer: number,
+  classNameForm: string,
+  nextQuestion: () => void,
+  increment: () => void
 }
 
-type Inputs = {
-  answer: Answer
-}
+export const Form: FunctionComponent<Props> = ({ answers, correctAnswer, classNameForm, nextQuestion, increment }) => {
+  const [selectedAnswer, setSelectorAnswer] = useState<number>();
+  const [answered, setAnswered] = useState<boolean>(false);
 
-export const Form: FunctionComponent<Props> = ({ answers, classNameForm }) => {
-  const {
-    register,
-    handleSubmit,
-  } = useForm<Inputs>();
-
-  const onSubmit = (data: any) => {
-    console.log(data)
+  const onAnswer = () => {
+    if (correctAnswer === selectedAnswer) {
+      increment();
+    }
+    setAnswered(true);
   }
 
-  return <form className={classNames(styles.form, classNameForm)} onSubmit={handleSubmit(((data) => onSubmit(data)))}>
-    <ul className={styles.select} {...register("answer", { required: true})} >
-      {answers?.map((answer) => {
-        return <div key={answer.id} className={styles.container}>
-          <li className={styles.option} value={answer.id}>{answer.text}</li>
-        </div>
+  const onNext = () => {
+    setAnswered(false);
+    setSelectorAnswer(undefined);
+    nextQuestion();
+  }
+
+   return (
+    <div className={classNames(styles.form, classNameForm)}>
+      <div className={styles.select}>
+        {answers?.map((answer) => {
+          return <Button key={answer.id} className={classNames(
+            "answerButton",
+            selectedAnswer === answer.id && !answered && "active",
+            selectedAnswer === answer.id && answered && "right",
+            correctAnswer === answer.id && answered && "wrong",
+          )} onClick={() => setSelectorAnswer(answer.id)} disabled={answered} text={answer.text} />
         })
+        }
+      </div>
+      {
+        answered ? <Button className="nextQuestion" onClick={onNext} disabled={false} text={"Next"} />:
+        <Button className="gameButton" onClick={onAnswer} disabled={selectedAnswer === undefined} text={"Answer"}/>
       }
-    </ul>
-    <Button className={styles.button} onClick={() => {"text"}} disabled={true} text={"Answer"}/>
-  </form>
+    </div>
+  );
 }

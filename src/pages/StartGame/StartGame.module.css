@@ -1,27 +1,31 @@
 .startGame {
-  margin: 140px auto;
   max-width: 1040px;
-  background-color: white;
   padding: 65px 85px 80px;
   border-radius: 20px;
+  margin: 140px auto;
+  background-color: white;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
 }
 
 .header {
   margin-bottom: 25px;
 }
 
-.rule {
-
+.rules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
 }
 
 .button {
+  color: var(--color-primary-03);
   width: 190px;
   margin-top: 35px;
 }

@@ -1,0 +1,72 @@
+.button {
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.button:active {
+  background-color: var(--color-primary-on-click);
+}
+
+.button:disabled {
+  background-color: var(--color-primary-disabled);
+}
+
+.gameButton {
+  padding: 16px 0;
+  background-color: var(--color-primary-02);
+  color: white;
+  width: 190px;
+  font-weight: 500;
+}
+
+.selectARoomButton {
+
+}
+
+.answerButton {
+  width: 100%;
+  padding: 25px 17px;
+  background-color: var(--color-primary-01);
+  text-align: start;
+  font-weight: 400;
+}
+
+.answerButton:hover {
+  background-color: var(--color-primary-05);
+}
+
+.answerButton:disabled {
+  background-color: var(--color-primary-01);
+  color: black;
+}
+
+.active {
+  background-color: var(--color-primary-04);
+}
+
+.active:hover {
+  background-color: var(--color-primary-04);
+}
+
+.wrong {
+  background-color: var(--color-additional-04);
+}
+
+.wrong:disabled {
+  background-color: var(--color-additional-04);
+}
+
+.right {
+  background-color: var(--color-additional-01);
+}
+
+.right:disabled {
+  background-color: var(--color-additional-01);
+}

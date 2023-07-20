@@ -6,17 +6,21 @@
 
 .select {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  gap: 15px;
   margin-bottom: 50px;
+  gap: 15px;
 }
 
 .container {
   width: 100%;
-  padding: 25px 17px;
-  background-color: var(--color-primary-01);
 }
 
 .option {
-  text-decoration: none;
+  width: 100%;
+  padding: 25px 17px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-primary-01);
+  text-align: start;
 }
