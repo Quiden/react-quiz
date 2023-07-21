@@ -36,6 +36,7 @@
   background-color: var(--color-primary-01);
   text-align: start;
   font-weight: 400;
+  position: relative;
 }
 
 .answerButton:hover {
@@ -69,4 +70,16 @@
 
 .right:disabled {
   background-color: var(--color-additional-01);
+}
+
+.iconRight {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.iconWrong {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }

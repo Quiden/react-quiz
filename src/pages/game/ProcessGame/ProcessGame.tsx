@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 
-import { Form } from '../../components/Form/Form.tsx';
-import type { RootState } from '../../redux/store.ts';
+import { Form } from '../../../components/Form/Form.tsx';
+import type { RootState } from '../../../redux/store.ts';
 import styles from "./ProcessGame.module.css";
 import { useCallback, useState } from 'react';
 import { EndGame } from '../EndGame/EndGame.tsx';
@@ -27,7 +27,7 @@ export const ProcessGame = () => {
     {count >= questions.length ? <EndGame points={points} />:
       <div className={styles.game}>
         <div className={styles.container}>
-          <h3 className={styles.title}>Question {count + 1}</h3>
+          <h3 className={styles.title}>Question {count + 1}/{questions.length}</h3>
           <h5 className={styles.score}>Points: {points}</h5>
           <p className={styles.text}>{question.text}</p>
           <Form answers={question.answers} correctAnswer={question.correctAnswer} classNameForm={styles.form} nextQuestion={nextQuestion} increment={increment} />

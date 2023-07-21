@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .select {
@@ -23,4 +24,16 @@
   border-radius: 10px;
   background-color: var(--color-primary-01);
   text-align: start;
+}
+
+.point {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  color: var(--color-primary-02);
+}
+
+.active {
+  display: block;
 }

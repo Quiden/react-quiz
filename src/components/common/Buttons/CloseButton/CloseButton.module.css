@@ -1,0 +1,19 @@
+.button {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border: none;
+    background-color: white;
+}
+
+.icon {
+    fill: var(--color-grayscale-00);
+}
+
+.icon:hover {
+    fill: var(--color-grayscale-01);
+}
+
+.icon:active {
+    fill: var(--color-grayscale-02);
+}

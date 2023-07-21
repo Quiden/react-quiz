@@ -44,9 +44,10 @@ export const Form: FunctionComponent<Props> = ({ answers, correctAnswer, classNa
         }
       </div>
       {
-        answered ? <Button className="nextQuestion" onClick={onNext} disabled={false} text={"Next"} />:
+        answered ? <Button className="gameButton" onClick={onNext} disabled={false} text={"Next"} />:
         <Button className="gameButton" onClick={onAnswer} disabled={selectedAnswer === undefined} text={"Answer"}/>
       }
+      <p className={classNames(styles.point, answered && styles.active)}>You got {correctAnswer === selectedAnswer ? 1: 0} points</p>
     </div>
   );
 }

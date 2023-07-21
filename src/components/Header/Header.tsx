@@ -3,6 +3,7 @@ import { Popup } from '../common/Popup/Popup.tsx';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store.ts';
+import { CloseButton } from '../common/Buttons/CloseButton/CloseButton.tsx';
 
 export const Header = () => {
   const [modalActive, setModalActive] = useState(false);
@@ -18,7 +19,7 @@ export const Header = () => {
       </div>
     </div>
     <Popup active={modalActive} setActive={setModalActive}>
-      <button></button>
+      <CloseButton setActive={setModalActive} />
       <h3 className={styles.titleRules}>Game rules</h3>
       <div className={styles.rules}>
         {rules?.map((rule) => (

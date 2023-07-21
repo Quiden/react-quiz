@@ -6,7 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import { Header } from './components/Header/Header.tsx';
 import { Layout } from './components/Layout/Layout.tsx';
-import { ProcessGame } from './pages/ProcessGame/ProcessGame.tsx';
+import { ProcessGame } from './pages/game/ProcessGame/ProcessGame.tsx';
 import { StartGame } from './pages/StartGame/StartGame.tsx';
 
 function App() {
