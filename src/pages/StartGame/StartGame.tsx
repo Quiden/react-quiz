@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { Button } from '../../components/common/Buttons/Button/Button.tsx';
 import { RootState } from '../../redux/store.ts';
 import styles from "./StartGame.module.css";
-import { Link } from 'react-router-dom';
 
 export const StartGame = () => {
   const rules = useSelector((state: RootState) => state.game.rules);

@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
+
 import { Button } from '../../../components/common/Buttons/Button/Button.tsx';
 import styles from "./EndGame.module.css";
 

@@ -1,7 +1,7 @@
+import './Button.css';
+
 import * as classNames from 'classnames';
 import { FunctionComponent } from 'react';
-
-import './Button.css';
 
 interface Props {
   className: string;

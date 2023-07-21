@@ -1,9 +1,10 @@
-import styles from "./Header.module.css";
-import { Popup } from '../common/Popup/Popup.tsx';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+
 import { RootState } from '../../redux/store.ts';
 import { CloseButton } from '../common/Buttons/CloseButton/CloseButton.tsx';
+import { Popup } from '../common/Popup/Popup.tsx';
+import styles from "./Header.module.css";
 
 export const Header = () => {
   const [modalActive, setModalActive] = useState(false);

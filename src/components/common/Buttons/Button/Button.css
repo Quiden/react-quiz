@@ -19,10 +19,10 @@
 }
 
 .gameButton {
+  width: 190px;
   padding: 16px 0;
   background-color: var(--color-primary-02);
   color: white;
-  width: 190px;
   font-weight: 500;
 }
 
@@ -31,12 +31,12 @@
 }
 
 .answerButton {
+  position: relative;
   width: 100%;
   padding: 25px 17px;
   background-color: var(--color-primary-01);
-  text-align: start;
   font-weight: 400;
-  position: relative;
+  text-align: start;
 }
 
 .answerButton:hover {

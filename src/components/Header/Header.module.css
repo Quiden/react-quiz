@@ -33,6 +33,6 @@
 .rules {
   display: flex;
   flex-direction: column;
-  gap: 15px;
   margin-bottom: 45px;
+  gap: 15px;
 }

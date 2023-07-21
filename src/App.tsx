@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path={'/game'} element={<ProcessGame />} />
           <Route path="/" element={<StartGame />} />
-          <Route path={"*"} element={<div>404</div>} />
+          <Route path={'*'} element={<div>404</div>} />
         </Routes>
       </Layout>
     </>

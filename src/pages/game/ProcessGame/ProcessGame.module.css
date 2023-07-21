@@ -1,9 +1,9 @@
 .game {
   max-width: 880px;
   padding: 50px 100px;
+  border-radius: 20px;
   margin: 70px auto;
   background-color: white;
-  border-radius: 20px;
 }
 
 .container {

@@ -1,10 +1,10 @@
+import { useCallback, useState } from 'react';
 import { useSelector } from 'react-redux'
 
 import { Form } from '../../../components/Form/Form.tsx';
 import type { RootState } from '../../../redux/store.ts';
-import styles from "./ProcessGame.module.css";
-import { useCallback, useState } from 'react';
 import { EndGame } from '../EndGame/EndGame.tsx';
+import styles from "./ProcessGame.module.css";
 
 export const ProcessGame = () => {
   const questions = useSelector((state: RootState) => state.questions.questions);
