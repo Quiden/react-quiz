@@ -6,22 +6,22 @@ import { Route, Routes } from 'react-router-dom';
 
 import { Header } from './components/Header/Header.tsx';
 import { Layout } from './components/Layout/Layout.tsx';
-import { ProcessGame } from './pages/game/ProcessGame/ProcessGame.tsx';
 import { StartGame } from './pages/StartGame/StartGame.tsx';
+import { Game } from './pages/game/Game.tsx';
 
-function App() {
+const App = () => {
   return (
     <>
       <Header />
       <Layout>
         <Routes>
-          <Route path={'/game'} element={<ProcessGame />} />
+          <Route path={'/game'} element={<Game />} />
           <Route path="/" element={<StartGame />} />
           <Route path={'*'} element={<div>404</div>} />
         </Routes>
       </Layout>
     </>
   );
-}
+};
 
 export default App;

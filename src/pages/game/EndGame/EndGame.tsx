@@ -5,15 +5,16 @@ import { Button } from '../../../components/common/Buttons/Button/Button.tsx';
 import styles from "./EndGame.module.css";
 
 interface Props {
-  points: number
+  points: number,
+  resetScore: () => void
 }
 
-export const EndGame: FunctionComponent<Props> = ({ points }) => {
+export const EndGame: FunctionComponent<Props> = ({ points, resetScore }) => {
   return <section className={styles.endGame}>
     <h1 className={styles.title}>Game finished</h1>
     <h3 className={styles.score}>Score: {points} points</h3>
     <Link className={styles.link} to="/">
-      <Button className={"gameButton"} disabled={false} text={"Play again"} />
+      <Button className={"gameButton"} onClick={resetScore} disabled={false} text={"Play again"} />
     </Link>
   </section>;
 }

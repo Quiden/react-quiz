@@ -1,9 +1,9 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const api = createApi({
-  reducerPath: "api",
+  reducerPath: "quizApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "",
+    baseUrl: "http://localhost:3000/",
     mode: "cors"
   }),
   endpoints: () => ({

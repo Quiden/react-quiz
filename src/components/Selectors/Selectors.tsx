@@ -1,25 +1,25 @@
 import * as classNames from 'classnames';
 import {FunctionComponent, useState} from 'react';
 
-import { Answer } from '../../redux/api/questionsApi.ts';
+import { Answer } from '../../redux/services/questionsApi.ts';
 import { Button } from '../common/Buttons/Button/Button.tsx';
-import styles from "./Form.module.css";
+import styles from "./Selectors.module.css";
 
 interface Props {
   answers: Array<Answer>,
   correctAnswer: number,
   classNameForm: string,
   nextQuestion: () => void,
-  increment: () => void
+  onRightAnswer: () => void
 }
 
-export const Form: FunctionComponent<Props> = ({ answers, correctAnswer, classNameForm, nextQuestion, increment }) => {
+export const Selectors: FunctionComponent<Props> = ({ answers, correctAnswer, classNameForm, nextQuestion, onRightAnswer }) => {
   const [selectedAnswer, setSelectorAnswer] = useState<number>();
   const [answered, setAnswered] = useState<boolean>(false);
 
   const onAnswer = () => {
     if (correctAnswer === selectedAnswer) {
-      increment();
+      onRightAnswer();
     }
     setAnswered(true);
   }

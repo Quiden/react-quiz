@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface Game {
   rules: Array<string>,
@@ -19,10 +19,22 @@ const initialState: Game = {
   score: 0
 };
 
-const gameSlice = createSlice({
+export const gameSlice = createSlice({
   name: 'game',
   initialState,
-  reducers: {}
+  reducers: {
+    increment(state) {
+      state.score += 1;
+    },
+    incrementByAmount(state, action: PayloadAction<number>) {
+      state.score += action.payload;
+    },
+    reset(state) {
+      state.score = 0;
+    }
+  }
 });
+
+export const { increment, incrementByAmount, reset } = gameSlice.actions;
 
 export default gameSlice.reducer;
