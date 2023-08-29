@@ -6,8 +6,8 @@ import { Button } from '../common/Buttons/Button/Button.tsx';
 import styles from "./Selectors.module.css";
 
 interface Props {
-  answers: Array<Answer>,
-  correctAnswer: number,
+  answers: Array<Answer> | undefined,
+  correctAnswer: number | undefined,
   classNameForm: string,
   nextQuestion: () => void,
   onRightAnswer: () => void

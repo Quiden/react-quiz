@@ -12,6 +12,10 @@
   margin: 0 auto;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .title {
   color: var(--color-primary-03);
 }
